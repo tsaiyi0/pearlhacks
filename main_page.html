@@ -9,14 +9,46 @@
         <body style="background-color: #ed5377;">
             <h2>Enter your specifications:</h2>
             
-            <div class="container">
+            <!--<div class="container">
                 <div class="quantity">
                   <a href="#" class="quantity__minus"><span>-</span></a>
                   <input name="quantity" type="text" class="quantity__input" value="1">
                   <a href="#" class="quantity__plus"><span>+</span></a>
                 </div>
+            </div>-->
+            
+            <div class="wrapper">
+                <span class='minus'>-</span>
+                <span class='num'>05</span> <!--start counter at 5-->
+                <span class="plus">+</span>
             </div>
             
+            <script>
+                const plus = document.querySelector(".plus"),
+                minus = document.querySelector(".minus"),
+                num = document.querySelector(".num");
+
+                let a = 1;
+
+                plus.addEventListener("click", ()=>{
+                a++
+                a =  (a <10) ? "0" + a : a;
+                num.innerText = a;
+                console.log(a);
+                });
+
+
+                minus.addEventListener("click", ()=>{
+                if (a>1){
+                    a--;
+                    a = (a < 10) ? "0" + a : a;
+                    num.innerText = a;
+                }
+                });
+            </script>
+
+
+
             <p>Workout Length</p>
                 <form method="post" action=".">
                 <p><input name="number1" /></p>
