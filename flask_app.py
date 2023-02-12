@@ -1,6 +1,8 @@
 #trying to make the website interactive
 
 from flask import Flask, request
+import pandas as pd
+workoutdata = pd.read_csv(r"C:\Users\etsai\OneDrive - University of North Carolina at Chapel Hill\PearlHacks2023\workouts.csv")
 
 from processing import do_calculation
 
